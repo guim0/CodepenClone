@@ -1,51 +1,69 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
+}
+/* BACKGROUND COLOR FROM TOP PANEL 'HTML / CSS / JS*/
+.top-pane {
+  background-color: hsl(225, 6%, 25%);
+}
+/* HEIGHT AND POSITION FROM TOP PANEL 'HTML / CSS / JS*/
+.pane {
+  height: 50vh;
+  display: flex;
+}
+/* DISPLAY FLEX SIZE AND SPACING FROM TOP PANEL 'HTML / CSS / JS*/
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: hsl(225, 6%, 25%);
 }
 
-.top-pane{
-    background-color: hsl(225, 6%, 25%);
+/* SIZE OF THE 'decrease' THE FROM TOP PANEL 'HTML / CSS / JS*/
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+/*POSITION STATIC! DONT MOVE!*/
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
 }
 
-.pane{
-    height: 50vh;
-    display: flex;
+/*BUTTON FROM COLLAPSED ACTION*/
+.expand-collapsed-btn {
+  margin-left: 5rem;
+  background: none;
+  border: none;
+  border-radius: 1px;
+  color: white;
+  outline: none;
 }
+/*BUTTON FROM COLLAPSED ACTION = HOVER*/
+.expand-collapsed-btn:hover {
+  background-color: ghostwhite;
+  color: black;
+  transition: 0.5s;
+}
+/*THE TOP FROM THE PANEL ' HTML  /  BUTTON '*/
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 6%, 13%);
+  color: white;
 
-.editor-container{
-    flex-grow: 1;
-    flex-basis: 0;
-    display: flex;
-    flex-direction: column;
-    padding: .5rem;
-    background-color: hsl(225, 6%, 25%);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
+/*DIMENSION FROM THE PANEL LIMIT HEIGHT*/
+.CodeMirror {
+  height: 100% !important;
+}
+/*DIMENSION OF THE DISPLAY FLEX BETWEEN THE PANNELS*/
 
-.editor-container.collapsed{
-    flex-grow: 0;
-}
-
-.editor-container.collapsed .CodeMirror-scroll{
-    position: absolute;
-}
- 
-.editor-title{
-    display: flex;
-    justify-content: space-between;
-    background-color: hsl(225, 6%, 13%);
-    color: white;   
-
-    padding: .5rem .5rem .5rem .5rem;
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem ;
-}
-
-.CodeMirror{
-    height: 100% !important;
-}
 .code-mirror-wrapper {
-    flex-grow: 1;
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem ;
-    overflow: hidden;
-
+  flex-grow: 1;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  overflow: hidden;
 }
